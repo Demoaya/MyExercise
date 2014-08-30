@@ -121,7 +121,7 @@ html, body
 		border-radius: 50%;
 	}
 	
-	.button
+	.button 
 	{
 		display: inline-block;
 		padding: 0em 3em;
@@ -134,8 +134,22 @@ html, body
 		font-weight: 400;
 		font-size: 1em;
 		color: #FFF;
+		positon:absolute;
 	}
-	
+	#bott
+	{
+				display: inline-block;
+		padding: 0em 3em;
+		background: #27AE61;
+		border-radius: 8px;
+		letter-spacing: 0.20em;
+		line-height: 4em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1em;
+		color: #FFF;
+	}
  	#header
 	{
 		position: relative;
@@ -233,7 +247,19 @@ html, body
 		background: #2B3F48 !important;
 	}
 	
-	
+	#timer
+	{
+		padding:10px;
+		margin:5px;
+		positon:absolute;
+	}
+ 	#slide
+ 	{
+ 		margin:10px;
+ 		coloer:#385635;
+ 		positon:absolute;
+ 		
+ 	}
 	
 	
 	
