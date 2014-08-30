@@ -15,7 +15,3 @@ function checkTime(i)
 		return i
 }
 
-function thanks()
-{
-	document.getElementById("banner").innerHTML="<h2>Thanks<h2>"
-}

@@ -1,0 +1,44 @@
+			JS  Window
+location.assign() 方法加载新的文档（页面）。
+
+window.navigator 对象包含有关访问者浏览器的信息
+
+可以在 JavaScript 中创建三种消息框：警告框、确认框（confirm("")）、提示框（prompt("","")）
+
+setTimeout()   未来的某时执行代码      ;clearTimeout()   取消setTimeout()
+
+			JQuery 
+
+$(document).ready(function)	将函数绑定到文档的就绪事件（当文档完成加载时）
+$(selector).click(function)	触发或将函数绑定到被选元素的点击事件
+$(selector).dblclick(function)	触发或将函数绑定到被选元素的双击事件
+$(selector).focus(function)	触发或将函数绑定到被选元素的获得焦点事件
+$(selector).mouseover(function)	触发或将函数绑定到被选元素的鼠标悬停事件
+
+
+$(selector).hide(speed,callback);
+
+$(selector).show(speed,callback);
+
+$("p").toggle(1000)；渐渐消失（出现）的效果。hide和show的组合
+
+fadeIn()
+fadeOut()
+fadeToggle()
+fadeTo()
+
+slideDown()
+slideUp()
+slideToggle(）
+
+jQuery animate() 方法用于创建自定义动画
+$(selector).animate({params},speed,callback);
+
+当使用 animate() 时，必须使用 Camel 标记法书写所有的属性名，比如，必须使用 paddingLeft 而不是 padding-left，使用 marginRight 而不是 margin-right，等等。
+
+$(selector).stop(stopAll,goToEnd);
+可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+
+Callback 函数在当前动画 100% 完成之后执行。
+
+$("#p1").css("color","red").slideUp(2000).slideDown(2000);
