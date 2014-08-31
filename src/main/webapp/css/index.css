@@ -112,7 +112,7 @@ html, body
 
 	ul.staff li
 	{
-		display: inline-block;
+		display:inline-block;
 	}
 	
 	ul.staff li img
@@ -134,7 +134,8 @@ html, body
 		font-weight: 400;
 		font-size: 1em;
 		color: #FFF;
-		positon:absolute;
+		position:relative;
+		
 	}
 	#bott
 	{
@@ -253,13 +254,83 @@ html, body
 		margin:5px;
 		positon:absolute;
 	}
- 	#slide
+ 	#slide 
  	{
  		margin:10px;
- 		coloer:#385635;
+ 		color:#800000;
  		positon:absolute;
+ 	 
+ 		font-size:2em
  		
  	}
-	
-	
-	
+	#search
+	{
+		margin:5px;
+		padding:5px;
+		color:#2B3F48;
+	}
+	#red
+	{
+		display: inline-block;
+		padding: 0em 1em;
+		background: #8080ff;
+		border-radius: 5px;
+		letter-spacing: 0.20em;
+		line-height: 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1em;
+		color: #00ff40;
+		position:relative;
+	}
+	#size
+	{
+			display: inline-block;
+		padding: 0em 1em;
+		background: #8080ff;
+		border-radius: 5px;
+		letter-spacing: 0.20em;
+		line-height: 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1em;
+		color: #00ff40;
+		position:relative;
+	}
+	#chtext
+	{
+				display: inline-block;
+		padding: 0em 1em;
+		background: #8080ff;
+		border-radius: 5px;
+		letter-spacing: 0.20em;
+		line-height: 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1em;
+		color: #00ff40;;
+		position:relative;
+	}
+	#append
+	{
+		padding:1em;
+		background:#0909ff;
+		display: inline-block;
+		border-radius: 5px;
+		letter-spacing: 0.20em;
+		font-size: 1em;
+		color: #00ff40;
+	}
+	#remove
+	{
+				padding:1em;
+		background:#0909ff;
+		display: inline-block;
+		border-radius: 5px;
+		letter-spacing: 0.20em;
+		font-size: 1em;
+		color: #00ff40;
+	}
