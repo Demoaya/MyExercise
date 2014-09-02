@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>heroes</title>
+<link href="css\index.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js\jquery-2.0.3.min.js"></script>
+<script src="js\0902.js"></script>
+</head>
+<body >
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="#">JS Test By Demoaya</a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="/index.htm" accesskey="1" title="">Homepage</a></li>
+			<li><a href="/heroes.htm" accesskey="2" title="">Our Heroes</a></li>
+			<li><a href="#" accesskey="3" title="">About Us</a></li>
+			<li><a href="#" accesskey="4" title="">Careers</a></li>
+			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+<div id="banner">
+	<div class="container">
+		<ul class="staff">
+			<li><img id="img" src="http://wenwen.sogou.com/p/20110103/20110103192356-813612626.jpg"></li>
+		</ul>
+		<form action="" style="margin-top:15px;"> 
+			<label>请选择一位英雄：
+			<select id=sel name="heroes" onchange="showHeroes(this.value)" style="font-family:Verdana, Arial, Helvetica, sans-serif;">
+			<option value="doom">末日使者</option>
+			<option value="luna">月之骑士</option>
+			<option value="pom">月之女祭司</option>
+			<option value="tiny">小小</option>
+			</select>
+			</label>
+		</form>
+		<br />
+		<div id="txtHeroAttr">英雄属性将在此处列出 ...</div>
+	</div>
+</div>
+</body>
+</html>
