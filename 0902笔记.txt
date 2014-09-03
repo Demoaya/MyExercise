@@ -1,0 +1,56 @@
+﻿开始学习BriteSnow
+
+Brite
+
+
+brite.display(viewName,parent) to instantiate and display a new 
+viewbrite.registerView(viewName,viewDefinition) to define a View and its APIs.
+
+brite.registerView("MyView", 
+   // The implementation 
+   {
+     // required
+     create: function(data,config){
+       return $("<div>This is MyView <button class="clickme">Click Me</button></div>");
+     }, 
+     
+     // optional
+     postDisplay: function(data,config){
+       this.$el; // is the jQuery wrapped HTMLElement for this view (the one returned by create). 
+       this.id;  // is the unique id of this view instance
+       console.log("I can be seen now, I am turning green");
+       this.$el.css("background","green");
+     }  
+   }
+);
+
+brite.registerView(viewName,config,viewDefinition) 
+
+tmpl/MyView.tmpl
+<!-- using the script tag technic. Can be any templating engine -->  
+<dscript id="tmpl-MyView" type="text/html">
+  <div class="MyView">
+    <!-- any HTML, templating engine -->
+    <!-- twitter/boostrap fits very well here -->
+  </div>
+</script> 
+
+
+css/MyView.css
+.MyView{
+  ...
+}
+
+/* always prefix View sub elements with View name */
+.MyView .subElement{
+  ...
+}
+
+View names are CamelCase and start with a Upper case (simpler to read later)
+Template file name format as: /tmpl/[ViewName].tmpl
+Template script tag id as: <script id="tmpl-[ViewName]" ... />
+The first HTML element of a template output must have class="[ViewName]" (use class over id to allow multiple instantiation)
+CSS (or less/sass) files should follow the same naming pattern: /css/[ViewName.css]
+View specific css rules must be prefixed with the view name: .MyView .subElement {... or even .MyView-subElement {...
+The View's JavaScript file should follow same naming pattern: /js/[ViewName].js and obviously the brite.registerView([ViewName] ... code should match the view name.
+Only ViewName files and css classes should start with upper case (this makes it very easy to read code later as the project grow)
