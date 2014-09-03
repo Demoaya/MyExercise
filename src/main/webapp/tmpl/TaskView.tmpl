@@ -1,0 +1,31 @@
+<script id="tmpl-TaskView" type="text/html">
+	<div class="TaskView">
+		<h2>Task</h2>
+		<table class="taskTable">
+			<tr>
+				<th>task name</th>
+				<th>serial number</th>
+				<th>DateTime</th>
+				
+			</tr>
+			
+			{{#each taskList}}
+			<tr data-contact-id="{{id}}">
+			 	<td>{{taskName}}</td>
+			 	<td>{{serialNum}}</td>
+			 	<td>
+			 		{{#each dateTime}}
+			 			{{dateTime}}
+			 		{{/each}}
+			 	</td>
+	    		<td>
+	    			<button class="add">Add</button>
+					<button class="alter">Alter</button>
+					<button class="delete">Delete</button>
+	    		</td>
+	    	</tr>
+    		{{/each}}
+			
+		</table>
+	</div>
+</script>  

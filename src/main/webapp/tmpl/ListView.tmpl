@@ -1,0 +1,23 @@
+<script id="tmpl-ListView" type="text/html">
+	<div class="ListView">
+		<h2>taskList</h2>
+		
+		<table class="listTable">
+			<tr>
+				<th>taskName</th>
+				<th><button class="add">Add Task</button></th>
+			</tr>
+			
+			{{#each taskList}}
+			<tr data-list-id="{{id}}">
+			 	<td>{{taskName}}</td>
+	    		<td>
+	    			<button class="alter">Alter Task</button>
+					<button class="delete">Delete Task</button>
+	    		</td>
+	    	</tr>
+    		{{/each}}
+			
+		</table>
+	</div>
+</script>
