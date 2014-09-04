@@ -1,55 +1,39 @@
-function validate_email(field,alerttxt)
-{
-with (field)
-{
-apos=value.indexOf("@")
-dotpos=value.lastIndexOf(".")
-if (apos<1||dotpos-apos<2) 
-  {alert(alerttxt);return false}
-else {return true}
-}
-}
+// Here we are telling brite to load the /tmpl/ViewName.tmpl and /css/ViewName.css
+// on demand. Very useful for development, could be turn off for production (where files could 
+// be pre-compile and concatenated).
+brite.viewDefaultConfig.loadTmpl = true;
+brite.viewDefaultConfig.loadCss = true;
 
-function validate_form(thisform)
-{
-with (thisform)
-{
-if (validate_email(email,"Not a valid e-mail address!")==false)
-  {email.focus();return false}
-}
-}
+// When the document is ready, we display the MainView (which will display the sub views) 
+$(document).ready(function(){
+  brite.display("MainView","#pageBody");
+});
 
-function startTime()
-{
-var today=new Date()
-var h=today.getHours()
-var m=today.getMinutes()
-var s=today.getSeconds()
-// add a zero in front of numbers<10
-m=checkTime(m)
-s=checkTime(s)
-document.getElementById('txt').innerHTML=h+":"+m+":"+s
-t=setTimeout('startTime()',500)
+// Just a little indirection to render a template using handlebars.
+// This simple indirection allows much flexibility later one, 
+// when using pre-compiling or other templating engine are needed.
+Handlebars.templates = Handlebars.templates || {};	
+function render(templateName,data){
+	var tmpl = Handlebars.templates[templateName];
+	
+	if (!tmpl){
+		var tmplContent = $("#" + templateName).html();
+		tmpl = Handlebars.compile(tmplContent);
+		Handlebars.templates[templateName] = tmpl;		
+	}
+	return tmpl(data);
 }
 
-function checkTime(i)
-{
-if (i<10) 
-  {i="0" + i}
-  return i
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+main.projectListTestData = [
+                            {id:"001",title:"Grocery List"},
+                            {id:"002",title:"House Remodeling"},
+                            {id:"003",title:"Learn HTML5"},
+                            {id:"004",title:"Learn Brite"}
+                          ]
+                          
+main.taskListTestData = [
+                            {id:"101",projectId:"001",done:false,title:"Heavy Whipping cream"},
+                            {id:"102",projectId:"001",done:true,title:"1 Garlic"},
+                            {id:"103",projectId:"001",done:false,title:"Mushrooms (cèpe)"},
+                            {id:"104",projectId:"001",done:false,title:"Fresh Pasta"}
+                          ]  

@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-  
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="css/MainView.css">
-    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="js/brite.js"></script>
-    <script type="text/javascript" src="js/RemoteDAOHandler.js"></script>
-    <script type="text/javascript" src="js/handlebars-1.0.rc.1.js"></script>
+    <title>Brite - TaskManager Sample - Tutorial 01</title>
 
-	[@webBundle path="/js/" type="js" /]
-	[@webBundle path="/css/" type="css" /]
 
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+
+
+    <!-- Best-Practice: this is the main css to be included first. Component css will be included
+                        dynamically, and all start with UpperCase to match their component name -->
+    <link rel="stylesheet" href="css/main.css" />
+    
+    <!-- This is the only hard dependency for brite.js -->
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+    
+    <!-- Best-Practice: Use handlebars. -->
+    <script type="text/javascript" src="js/1_handlebars-1.0.rc.1.js" ></script>
+
+    
+    <!-- Note: Should be "js/brite.min.js" but for this sample code we reuse the shared lib -->
+    <script type="text/javascript" src="js/brite-snapshot.js" ></script>
+
+    <script "text/javascript" src="js/main.js" ></script>
+      
+    
   </head>
+  
   <body>
- 
-    <div id = "mainview" ></div>
-		<script type="text/javascript">
-			var $mainview = $("body").find("#mainview");
-			$(document).ready(function(){
-				brite.display("MainView",$mainview);
-			});
-		</script>
+    <!-- Best-Practice: Here with use a "pageBody" element to get more flexibility on how we want to display 
+                        the application. This pageBody will be position in the main.css. -->
+    <div id="pageBody">
+      
+    </div>
   </body>
+  
 </html>
